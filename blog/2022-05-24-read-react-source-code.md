@@ -1,6 +1,6 @@
 ---
-slug: first-blog-post
-title: First Blog Post
+slug: read-react-source-code
+title: Read React source code
 authors: [nvh95]
 tags: [react]
 ---
