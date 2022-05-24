@@ -73,6 +73,11 @@ const config = {
           // },
           { to: "/blog", label: "Blog", position: "left" },
           {
+            href: "https://twitter.com/hung_dev",
+            label: "Twitter",
+            position: "right",
+          },
+          {
             href: "https://github.com/nvh95",
             label: "GitHub",
             position: "right",
