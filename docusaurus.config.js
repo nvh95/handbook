@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "nvh95 Handbook",
   tagline: "Things that I learned every day.",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://handbook.hung.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
