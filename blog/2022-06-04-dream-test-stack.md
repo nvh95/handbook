@@ -3,6 +3,7 @@ slug: dream-fe-test-stack
 title: Dream Frontend Test Stack
 authors: [nvh95]
 tags: [react, testing]
+image: /img/dream-fe-test-stack.jpg
 ---
 
 This is my dream frontend test stack, to test my React applications:
