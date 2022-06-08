@@ -12,6 +12,7 @@ I recently asked folks at WeBuild what are some good resources on reading React 
 - **react-fiber-implement:** https://github.com/tranbathanhtung/react-fiber-implement
 - **Build your own React:** https://pomb.us/build-your-own-react/
 - **read-react-source-code:** https://github.com/numbbbbb/read-react-source-code
+- **Contributing To React - Shawn Wang @ ReactNYC:** https://www.youtube.com/watch?v=GWCcZ6fnpn4
 
 **Bonus:**
 
