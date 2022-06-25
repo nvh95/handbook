@@ -10,32 +10,36 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
+    title: "Simple",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <>This handbook is simple. Just simply hit the Get Started to start.</>
     ),
   },
   {
-    title: "Focus on What Matters",
+    title: "Searchable",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Simply hit search button and type anything you want to find. Powered by{" "}
+        <a
+          href="https://www.algolia.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Algolia
+        </a>
+        .
       </>
     ),
   },
   {
-    title: "Powered by React",
+    title: "Frontend Oriented",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        I am a frontend developer. I take notes about issues and what I learned
+        in a daily basis.
       </>
     ),
   },
