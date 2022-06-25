@@ -114,6 +114,10 @@ const config = {
             title: "More",
             items: [
               {
+                label: "Jest Preview",
+                href: "https://www.jest-preview.com",
+              },
+              {
                 label: "Blog",
                 href: "https://hung.dev",
               },
