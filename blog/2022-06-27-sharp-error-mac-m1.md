@@ -30,3 +30,13 @@ The reason is `sharp` does not work work well with Mac M1 (yet), the solution is
 1. npm i
 
 Please see https://stackoverflow.com/a/67566332/3422559 for more.
+
+If this does not resolve your problem, try with Node 14.
+
+If this still does not resolve your problem, follow this (https://github.com/lovell/sharp/issues/2588#issuecomment-783254806)
+
+```
+brew remove vips
+rm -rf node_modules
+yarn install
+```
