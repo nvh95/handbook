@@ -13,6 +13,8 @@ I recently asked folks at WeBuild what are some good resources on reading React 
 - **Build your own React:** https://pomb.us/build-your-own-react/
 - **read-react-source-code:** https://github.com/numbbbbb/read-react-source-code
 - **Contributing To React - Shawn Wang @ ReactNYC:** https://www.youtube.com/watch?v=GWCcZ6fnpn4
+- **Reading Source Code: React:** https://alexkondov.com/readint-source-code-react/
+  <!-- TODO: Write blog post about READ strapi source code -->
 
 **Bonus:**
 
