@@ -5,7 +5,9 @@ authors: [nvh95]
 tags: [gatsby, mac m1, sharp]
 ---
 
-When running command `yarn` to install dependencies for a Gatsby project on Mac M1, I encounter this error:
+When running command `yarn` to install dependencies for a Gatsby project on Mac M1, I encounter this error with `sharp`:
+
+<!--truncate-->
 
 ```
 error /Users/myname/myrepo/node_modules/sharp: Command failed.

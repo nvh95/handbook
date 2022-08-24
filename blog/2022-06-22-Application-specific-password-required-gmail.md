@@ -11,6 +11,8 @@ If you want to add an alias to send an email from a different email address. You
 
 But you might encounter this issue: [AUTH] Application-specific password required.
 
+<!--truncate-->
+
 This issue happens if you setup Two factor authentication (which you should) for the other email. In this case, you need to follow this tutorial:
 
 - https://support.google.com/domains/answer/9437157?hl=en

@@ -9,6 +9,8 @@ I recently migrated my Gatsby project from yarn to pnpm. So in this post I will 
 
 You can see the full PR that I migrate my project to pnpm here: <https://github.com/nvh95/hung.dev/pull/62>
 
+<!--truncate-->
+
 ## Replace yarn/npm by pnpm
 
 1. Remove node_modules
