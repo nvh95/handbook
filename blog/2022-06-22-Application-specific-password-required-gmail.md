@@ -17,7 +17,7 @@ This issue happens if you setup Two factor authentication (which you should) for
 
 - https://support.google.com/domains/answer/9437157?hl=en
 
-The idea is you need to create an app password then use the app password to authenticate, instead of using the password directly.
+The idea is you need to create an app password then **use the app password to authenticate, instead of using the password directly.**
 
 I just copy the content in case of the above link is not accessible, or you just don't want to visit it 😂.
 
