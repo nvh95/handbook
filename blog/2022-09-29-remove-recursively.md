@@ -5,6 +5,10 @@ authors: [nvh95]
 tags: []
 ---
 
+How to remove files and folders with a name pattern recursively?
+
+<!-- truncate -->
+
 ## Remove files recursively
 
 - Dry run
@@ -29,7 +33,7 @@ https://askubuntu.com/questions/377438/how-can-i-recursively-delete-all-files-of
 find . -name 'node_modules' -type d -prune
 ```
 
-If you want to remove all `dist` folder, but not in `node_modules`:
+If you want to remove all `dist` folders, but not in `node_modules`:
 
 ```bash
 find . -name 'dist' -not -path "./node_modules/\*" -type d -prune
