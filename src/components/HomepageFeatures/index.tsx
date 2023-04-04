@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Searchable",
+    title: "Searchable (🚧)",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>

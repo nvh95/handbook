@@ -91,30 +91,8 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Content",
             items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Twitter",
-                href: "https://twitter.com/hung_dev",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Jest Preview",
-                href: "https://www.jest-preview.com",
-              },
               {
                 label: "Blog",
                 href: "https://hung.dev",
@@ -122,6 +100,40 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/nvh95",
+              },
+            ],
+          },
+          {
+            title: "Social Media",
+            items: [
+              {
+                label: "Twitter",
+                href: "https://twitter.com/hung_dev",
+              },
+              {
+                label: "Facebook",
+                href: "https://www.facebook.com/hungdotdev",
+              },
+              {
+                label: "Linked In",
+                href: "https://www.linkedin.com/in/nvh95/",
+              },
+            ],
+          },
+          {
+            title: "Products",
+            items: [
+              {
+                label: "Jest Preview",
+                href: "https://www.jest-preview.com",
+              },
+              {
+                label: "Vitest Preview",
+                href: "https://www.vitest-preview.com",
+              },
+              {
+                label: "Trò chuyện IT",
+                href: "https://trochuyenit.hung.dev/?utm_source=handbook",
               },
             ],
           },
