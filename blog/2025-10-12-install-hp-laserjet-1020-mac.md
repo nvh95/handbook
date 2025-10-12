@@ -9,6 +9,8 @@ Steps to install HP LaserJet 1020 printer on macOS.
 
 <!-- truncate -->
 
+It takes me a while to figure out how to install HP LaserJet 1020 on macOS Sequoia 15. Following are the steps I found to work. I hope this will save you some time.
+
 ## Standard Installation
 
 ### 1. Download HP Printer Software
