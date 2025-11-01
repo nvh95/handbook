@@ -144,6 +144,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: "6J72JX2WWN",
+        apiKey: "7ca6f09d7c853f7ad6bc5f24876e077d",
+        indexName: "handbook.hung.dev",
+      },
     }),
 };
 
