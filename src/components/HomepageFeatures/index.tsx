@@ -1,27 +1,30 @@
-import React from "react";
 import clsx from "clsx";
+import React from "react";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
-  description: JSX.Element;
+  imageSrc: string;
+  description: React.ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: "Simple",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    imageSrc: "/img/feature-simple.svg",
     description: (
-      <>This handbook is simple. Just simply hit the Get Started to start.</>
+      <>
+        Clear, practical notes on things I learn and problems I solve. Browse
+        the blog and find something useful.
+      </>
     ),
   },
   {
     title: "Searchable",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    imageSrc: "/img/feature-searchable.svg",
     description: (
       <>
-        Simply hit search button and type anything you want to find. Powered by{" "}
+        Find the note you need with a quick search. Powered by{" "}
         <a
           href="https://www.algolia.com/"
           target="_blank"
@@ -34,22 +37,22 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Frontend Oriented",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: "Engineer Oriented",
+    imageSrc: "/img/feature-engineering.svg",
     description: (
       <>
-        I am a frontend developer. I take notes about issues and what I learned
-        in a daily basis.
+        Lessons from my day-to-day work as a software engineer, covering
+        development, debugging, testing, and the tools I use along the way.
       </>
     ),
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, imageSrc, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} src={imageSrc} alt="" />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
@@ -59,7 +62,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">

@@ -7,7 +7,7 @@ tags: [gatsby, pnpm]
 
 I recently migrated my Gatsby project from yarn to pnpm. So in this post I will go over quickly what needs to be done to get it working.
 
-You can see the full PR that I migrate my project to pnpm here: <https://github.com/nvh95/hung.dev/pull/62>
+You can see the full PR that I migrate my project to pnpm here: [https://github.com/nvh95/hung.dev/pull/62](https://github.com/nvh95/hung.dev/pull/62)
 
 <!--truncate-->
 

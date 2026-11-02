@@ -19,7 +19,7 @@ navigator?.serviceWorker?.getRegistrations().then(function (registrations) {
 });
 ```
 
-Source: <https://stackoverflow.com/a/33705250/3422559>
+Source: [https://stackoverflow.com/a/33705250/3422559](https://stackoverflow.com/a/33705250/3422559)
 
 I put it inside an `useEffect` hook in a react component. Based on your framework, you can put it in the corresponding place.
 

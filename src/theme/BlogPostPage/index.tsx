@@ -1,12 +1,17 @@
 import React from 'react';
 import clsx from 'clsx';
 import {HtmlClassNameProvider, ThemeClassNames} from '@docusaurus/theme-common';
-import {BlogPostProvider, useBlogPost} from '@docusaurus/theme-common/internal';
+import {
+  BlogPostProvider,
+  useBlogPost,
+} from '@docusaurus/plugin-content-blog/client';
 import BlogLayout from '@theme/BlogLayout';
 import BlogPostItem from '@theme/BlogPostItem';
 import BlogPostPaginator from '@theme/BlogPostPaginator';
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
+import BlogPostPageStructuredData from '@theme/BlogPostPage/StructuredData';
 import TOC from '@theme/TOC';
+import ContentVisibility from '@theme/ContentVisibility';
 import GiscusComponent from '@site/src/components/GiscusComponent';
 function BlogPostPageContent({sidebar, children}) {
   const {metadata, toc} = useBlogPost();
@@ -28,6 +33,7 @@ function BlogPostPageContent({sidebar, children}) {
           />
         ) : undefined
       }>
+      <ContentVisibility metadata={metadata} />
       <BlogPostItem>{children}</BlogPostItem>
       <GiscusComponent />
       {(nextItem || prevItem) && (
@@ -46,6 +52,7 @@ export default function BlogPostPage(props) {
           ThemeClassNames.page.blogPostPage,
         )}>
         <BlogPostPageMetadata />
+        <BlogPostPageStructuredData />
         <BlogPostPageContent sidebar={props.sidebar}>
           <BlogPostContent />
         </BlogPostPageContent>

@@ -1,17 +1,20 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { themes } = require("prism-react-renderer");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "nvh95 Handbook",
-  tagline: "Things that I learned every day.",
+  tagline: "Things I learn while building things.",
   url: "https://handbook.hung.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
@@ -58,8 +61,8 @@ const config = {
       navbar: {
         title: "nvh95 Handbook",
         logo: {
-          alt: "nvh95 Handbook",
-          src: "img/logo.svg",
+          alt: "nvh95 Handbook1",
+          src: "img/avatar.png",
         },
         items: [
           // TODO: To think of a name
@@ -141,8 +144,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} nvh95. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: themes.github,
+        darkTheme: themes.dracula,
       },
       algolia: {
         appId: "6J72JX2WWN",
