@@ -35,10 +35,7 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/nvh95/handbook/edit/main/",
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/nvh95/handbook/edit/main/",
