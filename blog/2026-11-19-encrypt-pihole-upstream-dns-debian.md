@@ -15,7 +15,7 @@ This guide adds `dnscrypt-proxy` on a Debian 13 host and configures it to use Qu
 
 ## How the DNS path works
 
-<img src={require("./pihole-doh-flow.svg").default} alt="DNS flow from LAN devices through Pi-hole and dnscrypt-proxy to Quad9 over encrypted DoH" width="340" style={{ maxWidth: "100%", height: "auto" }} />
+<img src="/img/pihole-doh-flow.svg" alt="DNS flow from LAN devices through Pi-hole and dnscrypt-proxy to Quad9 over encrypted DoH" width="340" style={{ maxWidth: "100%", height: "auto" }} />
 
 The LAN-to-Pi-hole and container-to-proxy connections use ordinary DNS. The proxy encrypts the upstream connection from the Debian host to Quad9.
 
