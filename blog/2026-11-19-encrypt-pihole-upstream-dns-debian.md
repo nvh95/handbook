@@ -5,20 +5,17 @@ authors: [nvh95]
 tags: [debian, dns, docker, pihole, security, homelab]
 ---
 
-Pi-hole can filter and cache DNS requests for your LAN, but its upstream connection may still use ordinary DNS. If Pi-hole forwards requests directly to `9.9.9.9`, those requests normally travel over unencrypted DNS on port 53.
+Pi-hole is a network-wide DNS sinkhole: it can block domains on its lists, cache answers, and show which devices made DNS requests. Those features work only for requests that pass through Pi-hole.
 
-This guide adds `dnscrypt-proxy` on a Debian 13 host and configures it to use Quad9 over DNS-over-HTTPS (DoH). Pi-hole runs in Docker, and the proxy listens on the Docker bridge gateway so the container can reach it.
+My use case is Chrome's Secure DNS, which uses DNS-over-HTTPS (DoH). When Chrome is set to a custom secure DNS provider, its lookups go directly to that provider and bypass Pi-hole, so Pi-hole cannot filter or log them. I wanted to keep Pi-hole in the request path while encrypting the connection from Pi-hole to its upstream resolver. To do that, clients need to use Pi-hole for DNS, and Pi-hole needs an encrypted upstream.
+
+This guide adds `dnscrypt-proxy` on a Debian 13 host and configures it to use Quad9 over DoH. Pi-hole runs in Docker, and the proxy listens on the Docker bridge gateway so the container can reach it. This encrypts the Pi-hole-to-Quad9 connection; it does not configure Pi-hole to provide DoH or DNS-over-TLS (DoT) to clients. A client configured to send DoH or DoT directly to an external provider will still bypass Pi-hole.
 
 <!-- truncate -->
 
 ## How the DNS path works
 
-```text
-LAN device
-  └─ DNS on port 53 ──> Pi-hole container
-                           └─ DNS on port 5053 ──> dnscrypt-proxy on Debian
-                                                     └─ DoH over HTTPS ──> Quad9
-```
+<img src={require("./pihole-doh-flow.svg").default} alt="DNS flow from LAN devices through Pi-hole and dnscrypt-proxy to Quad9 over encrypted DoH" width="340" style={{ maxWidth: "100%", height: "auto" }} />
 
 The LAN-to-Pi-hole and container-to-proxy connections use ordinary DNS. The proxy encrypts the upstream connection from the Debian host to Quad9.
 
@@ -311,5 +308,6 @@ sudo systemctl stop dnscrypt-proxy.service
 - [dnscrypt-proxy documentation](https://github.com/DNSCrypt/dnscrypt-proxy/wiki)
 - [Quad9 service addresses and features](https://quad9.net/service/service-addresses-and-features/)
 - [Pi-hole Docker configuration](https://docs.pi-hole.net/docker/configuration/)
+- [Google Chrome Help: Manage Chrome safety and security](https://support.google.com/chrome/answer/10468685)
 - [Docker bridge networking](https://docs.docker.com/engine/network/drivers/bridge/)
 - [systemd.socket manual](https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html)
