@@ -5,7 +5,7 @@ authors: [nvh95]
 tags: [debian, dns, docker, pihole, security, homelab]
 ---
 
-Pi-hole is a network-wide DNS sinkhole: it can block domains on its lists, cache answers, and show which devices made DNS requests. Those features work only for requests that pass through Pi-hole.
+Pi-hole is a network-wide DNS sinkhole that can block ads and trackers by filtering requests to domains on its blocklists. It also caches answers and shows which devices made DNS requests. These features work only for requests that pass through Pi-hole.
 
 My use case is Chrome's Secure DNS, which uses DNS-over-HTTPS (DoH). When Chrome is set to a custom secure DNS provider, its lookups go directly to that provider and bypass Pi-hole, so Pi-hole cannot filter or log them. I wanted to keep Pi-hole in the request path while encrypting the connection from Pi-hole to its upstream resolver. To do that, clients need to use Pi-hole for DNS, and Pi-hole needs an encrypted upstream.
 
